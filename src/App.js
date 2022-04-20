@@ -1,13 +1,10 @@
-import { Header, Colors } from "./components";
+import { Colors } from "./components";
 
 const App = () => {
   return (
-    <>
-      <Header />
-      <main className="h-screen">
-        <Colors />
-      </main>
-    </>
+    <main>
+      <Colors />
+    </main>
   );
 };
 

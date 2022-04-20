@@ -6,8 +6,31 @@
 
 body {
   font-family: "Roboto", sans-serif;
+
+  overflow-y: hidden;
 }
 
-.color:hover .color-hover\:visible {
+main {
+  height: calc(100vh);
+}
+
+.color:focus-within > .color-hover\:visible,
+.color:hover > .color-hover\:visible {
   opacity: 1;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 2px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

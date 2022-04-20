@@ -1,5 +1,8 @@
+import ntc from "ntcjs";
+import toast from "react-hot-toast";
+
 export const randomColor = () => {
-  const letters = "0123456789ABCDEF";
+  const letters = "0123456789abcdef";
   var color = "#";
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
@@ -28,4 +31,16 @@ export const rgbToHex = (r, g, b) => {
   if (b.length === 1) b = "0" + b;
 
   return "#" + r + g + b;
+};
+
+export const copyColor = (text) => {
+  navigator.clipboard.writeText(text);
+
+  toast.success(`${text} copied to clipboard!`);
+};
+
+export const colorName = (color) => {
+  const match = ntc.name(color);
+
+  return match[1];
 };
