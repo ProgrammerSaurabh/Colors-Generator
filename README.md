@@ -8,6 +8,10 @@
 
 ![Shades modal](./src/assets/shades.png)
 
+### Logs colors on terminal as well
+
+![Terminal colors](./src/assets/log.png)
+
 ### Features
 
 - Hit spacebar to generate new colors.
